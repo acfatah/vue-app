@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "precommit": "npm run lint:fix"
   },
   "dependencies": {
     "vue": "^3.4.21"
@@ -16,7 +17,8 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.15.0",
     "@vitejs/plugin-vue": "^5.0.4",
-    "eslint": "^9.0.0",
+    "eslint": "^8.0.0",
+    "simple-git-hooks": "^2.11.1",
     "vite": "^5.2.0"
   }
 }
