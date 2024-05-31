@@ -25,6 +25,10 @@ const router = createRouter({
       name: 'blank',
       component: () => import('../views/BlankView.vue'),
     },
+    {
+      path: '/:pathMatch(.*)*',
+      component: () => import('../views/NotFoundView.vue'),
+    },
   ],
 })
 
