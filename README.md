@@ -29,7 +29,9 @@ Inspired by [Vitesse](https://github.com/antfu/vitesse), [Vitailse](https://gith
 
 - ⚡️ [Vite 2](https://github.com/vitejs/vite), [ESBuild](https://github.com/evanw/esbuild), [Vue 3](https://github.com/vuejs/vue-next)
 
-- <img src="https://th.bing.com/th?id=ODLS.095f9b22-a70b-47ed-bdb1-070466f08dc4&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" height="16" width="16" alt="Tailwindcss Icon" class="rms_img" data-bm="42">&nbsp; [Tailwind CSS](https://tailwindcss.com/)
+  <li>
+    <img src="https://th.bing.com/th?id=ODLS.095f9b22-a70b-47ed-bdb1-070466f08dc4&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" height="16" width="16" alt="Tailwindcss Icon" class="rms_img" data-bm="42">&nbsp; <a href="https://tailwindcss.com/">Tailwind Css</a>
+  </li>
 
 - 🍍 [State Management via Pinia](https://pinia.esm.dev/)
 
@@ -37,7 +39,10 @@ Inspired by [Vitesse](https://github.com/antfu/vitesse), [Vitailse](https://gith
 
 - 🔥 Use the [new `<script setup>` syntax](https://github.com/vuejs/rfcs/pull/227)
 
-- <img src="https://th.bing.com/th?id=ODLS.3408c44a-9dc6-431c-ab53-7985c9dee8e7&amp;w=32&amp;h=32&amp;qlt=90&amp;pcl=fffffa&amp;o=6&amp;pid=1.2" height="16" width="16" alt="Global web icon" class="rms_img" data-bm="52"> &nbsp; [ESLint](https://eslint.org/) with [@antfu/eslint-config](https://github.com/antfu/eslint-config)
+  <li>
+     <img src="https://th.bing.com/th?id=ODLS.3408c44a-9dc6-431c-ab53-7985c9dee8e7&amp;w=32&amp;h=32&amp;qlt=90&amp;pcl=fffffa&amp;o=6&amp;pid=1.2" height="16" width="16" alt="Global web icon" class="rms_img" data-bm="52"> &nbsp;
+    <a href="https://eslint.org/">ESLint</a> with <a href="https://github.com/antfu/eslint-config/">@antfu/eslint-config</a>
+  </li>
 
 ## Pre-installed Packages
 
@@ -74,8 +79,8 @@ If you prefer to clone it to local with the cleaner git history, you can use `de
 
 ```bash
 npx degit acfatah/vue-app my-vue-app && \
-  cd my-vue-app && \
-  npm i
+  cd $_ && \
+  npm install
 ```
 
 ### Checklist
