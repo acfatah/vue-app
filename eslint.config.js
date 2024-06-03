@@ -14,6 +14,7 @@ export default antfu(
   ...compat.config({
     extends: [
       'plugin:tailwindcss/recommended',
+      'plugin:storybook/recommended',
     ],
   }),
 )
