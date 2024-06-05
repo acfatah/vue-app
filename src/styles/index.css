@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-white dark:bg-neutral-950;
-  }
-
   #app {
     @apply flex flex-col min-h-screen;
   }
