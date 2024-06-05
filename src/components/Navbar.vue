@@ -1,40 +1,25 @@
 <template>
-  <nav>
+  <nav class="flex justify-center dark:text-white">
     <RouterLink to="/">
       Home
     </RouterLink>
-    <RouterLink to="/about">
+    <RouterLink to="/about" class="ml-4 border-l border-solid border-black pl-4 dark:border-white">
       About
     </RouterLink>
-    <RouterLink to="/blank">
+    <RouterLink to="/blank" class="ml-4 border-l border-solid border-black pl-4 dark:border-white">
       Blank
     </RouterLink>
   </nav>
 </template>
 
 <style scoped>
-nav {
-  width: 100%;
-  text-align: center;
-}
-
 /* https://v3.router.vuejs.org/api/#router-link */
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  @apply text-blue-500;
 }
 
 /* https://v3.router.vuejs.org/api/#router-link */
 nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
+  @apply underline;
 }
 </style>

@@ -12,13 +12,13 @@ import Navbar from '../components/Navbar.vue'
     <Navbar />
   </slot>
   <!-- Body Section -->
-  <main>
-    <p>
+  <main class="flex grow items-center justify-center">
+    <p class="dark:text-white">
       This is an about page
     </p>
   </main>
   <slot name="footer">
     <!-- Footer Section -->
-    <Footer />
+    <Footer class="flex justify-center" />
   </slot>
 </template>

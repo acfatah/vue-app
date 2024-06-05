@@ -5,7 +5,7 @@
 
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
-  "editor.formatOnSave": true, // default is false
+  "editor.formatOnSave": true, // Default: false
 
   // Auto fix
   "editor.codeActionsOnSave": {
@@ -44,5 +44,10 @@
     "gql",
     "graphql",
     "astro"
+  ],
+
+  // Remove css errors when using Tailwindcss functions and directives
+  "css.customData": [
+    ".vscode/tailwind.json"
   ]
 }
