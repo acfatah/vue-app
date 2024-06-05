@@ -13,11 +13,11 @@ import HelloWorld from '../components/HelloWorld.vue'
     <Navbar />
   </slot>
   <!-- Body Section -->
-  <main>
+  <main class="flex grow justify-center">
     <HelloWorld />
   </main>
   <slot name="footer">
     <!-- Footer Section -->
-    <Footer />
+    <Footer class="flex justify-center" />
   </slot>
 </template>

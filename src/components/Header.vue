@@ -1,34 +1,21 @@
 <script setup>
 import ViteSvg from '../assets/vite.svg'
 import VueSvg from '../assets/vue.svg'
+import TailwindcssSvg from '../assets/tailwindcss.svg'
 </script>
 
 <template>
   <header>
-    <div>
-      <a href="https://vitejs.dev" target="_blank">
-        <ViteSvg class="logo" width="48" alt="Vite logo" />
+    <div class="flex justify-center">
+      <a href="https://vitejs.dev" target="_blank" class="m-4">
+        <ViteSvg width="48" height="48" alt="Vite logo" class="transition-all duration-300 hover:drop-shadow-[0_0_32px_#646cff]" />
       </a>
-      <a href="https://vuejs.org/" target="_blank">
-        <VueSvg class="logo vue" width="48" alt="Vue logo" />
+      <a href="https://vuejs.org/" target="_blank" class="m-4">
+        <VueSvg width="48" height="48" alt="Vue logo" class="transition-all duration-300 hover:drop-shadow-[0_0_32px_#42b883]" />
+      </a>
+      <a href="https://tailwindcss.com/" target="_blank">
+        <TailwindcssSvg width="48" height="48" alt="Tailwindcss logo" class="transition-all duration-300 hover:drop-shadow-[0px_0px_2em__#38bdf8aa]" />
       </a>
     </div>
   </header>
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
