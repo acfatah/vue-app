@@ -9,7 +9,7 @@
 
   // Auto fix
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
+    "source.fixAll.eslint": "always", // Default: 'explicit'
     "source.organizeImports": "never"
   },
 

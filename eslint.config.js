@@ -1,7 +1,5 @@
 import antfu from '@antfu/eslint-config'
-import { FlatCompat } from '@eslint/eslintrc'
-
-const compat = new FlatCompat()
+import tailwindcss from 'eslint-plugin-tailwindcss'
 
 export default antfu(
   {
@@ -11,9 +9,6 @@ export default antfu(
       markdown: 'prettier',
     },
   },
-  ...compat.config({
-    extends: [
-      'plugin:tailwindcss/recommended',
-    ],
-  }),
+  // @ts-ignore
+  ...tailwindcss.configs['flat/recommended'],
 )
