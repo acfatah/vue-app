@@ -4,6 +4,8 @@ import './styles/index.css'
 import App from './App.vue'
 import router from './router'
 
+document.title = 'Vue + Vite'
+
 const app = createApp(App)
 
 app.use(createPinia())
