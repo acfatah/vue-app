@@ -1,5 +1,5 @@
-import '../../styles/app.css'
-import Placeholder from '../../components/Placeholder.vue'
+import '~/styles/app.css'
+import Placeholder from '~/components/Placeholder.vue'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
