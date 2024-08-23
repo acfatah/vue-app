@@ -1,5 +1,6 @@
 import '~/styles/app.css'
 import { vueRouter } from 'storybook-vue3-router'
+
 import HomeView from './HomeView.vue'
 import DefaultLayout from '~/layouts/DefaultLayout.vue'
 import Placeholder from '~/components/Placeholder.vue'
@@ -13,9 +14,8 @@ const customRoutes = [
 
 ]
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
-  title: 'Views/Layouts/DefaultLayout',
+  title: 'Layout/Stacked',
   component: DefaultLayout,
   tags: ['autodocs'],
   parameters: {
@@ -23,6 +23,9 @@ export default {
   },
 }
 
+/**
+ * The default layout
+ */
 export const Default = {
   decorators: [vueRouter(customRoutes)],
 
