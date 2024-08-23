@@ -1,5 +1,5 @@
 import { withThemeByClassName } from '@storybook/addon-themes'
-import '../src/styles/index.css'
+import '../src/styles/app.css'
 
 /** @type { import('@storybook/vue3').Preview } */
 const preview = {
@@ -12,7 +12,7 @@ const preview = {
     },
     options: {
       storySort: {
-        order: ['Readme', 'Components', 'Views'],
+        order: ['Readme', 'Views', 'Features', 'Components'],
         locales: 'en-US',
       },
     },
