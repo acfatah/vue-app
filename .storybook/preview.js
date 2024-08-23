@@ -12,7 +12,12 @@ const preview = {
     },
     options: {
       storySort: {
-        order: ['Readme', 'Views', 'Features', 'Components'],
+        order: [
+          'Readme',
+          'Misc',
+          'Layout',
+          'Example',
+        ],
         locales: 'en-US',
       },
     },

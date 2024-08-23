@@ -8,7 +8,7 @@ import Placeholder from '~/components/Placeholder.vue'
  * the shape and size of the content it represents.
  */
 export default {
-  title: 'Components/Placeholder',
+  title: 'Misc/Placeholder',
   component: Placeholder,
   tags: ['autodocs'],
 }
