@@ -17,4 +17,8 @@ export default {
     forms,
     typography,
   ],
+  safelist: [
+    'min-h-16',
+    'min-h-8',
+  ],
 }
