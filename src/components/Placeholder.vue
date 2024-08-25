@@ -1,5 +1,5 @@
 <template>
-  <div class="relative flex h-full min-h-4 items-center justify-center overflow-hidden rounded border border-dashed border-neutral-400 opacity-75 dark:border-neutral-500 dark:text-neutral-50">
+  <div class="relative flex h-full items-center justify-center overflow-hidden rounded border border-dashed border-neutral-400 opacity-75 dark:border-neutral-500 dark:text-neutral-50">
     <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 size-full stroke-neutral-400/30 dark:stroke-neutral-500/40">
       <defs>
         <pattern id="placeholder-svg-pattern" patternUnits="userSpaceOnUse" width="10" height="10">
