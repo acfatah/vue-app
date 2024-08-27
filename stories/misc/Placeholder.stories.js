@@ -50,3 +50,50 @@ export const WithContent = {
     template: withContentTemplate,
   }),
 }
+
+const roundedTemplate = `
+  <Placeholder class="size-8 rounded-full">AA</Placeholder>
+`
+
+export const Rounded = {
+  parameters: {
+    docs: {
+      source: {
+        code: roundedTemplate,
+      },
+    },
+  },
+
+  args: {
+    label: 'AA',
+  },
+
+  render: args => ({
+    components: { Placeholder },
+
+    template: `
+      <div class="flex gap-2">
+        <div class="flex flex-col justify-between items-center">
+          <Placeholder class="size-8 rounded-full">${args.label}</Placeholder>
+          <div class="text-xs">size-8</div>
+        </div>
+        <div class="flex flex-col justify-between items-center">
+          <Placeholder class="size-10 rounded-full">${args.label}</Placeholder>
+          <span class="text-xs">size-10</span>
+        </div>
+        <div class="flex flex-col justify-between items-center">
+          <Placeholder class="size-12 rounded-full">${args.label}</Placeholder>
+          <span class="text-xs">size-12</span>
+        </div>
+        <div class="flex flex-col justify-between items-center">
+          <Placeholder class="size-14 rounded-full">${args.label}</Placeholder>
+          <span class="text-xs">size-14</span>
+        </div>
+        <div class="flex flex-col justify-between items-center">
+          <Placeholder class="size-16 rounded-full">${args.label}</Placeholder>
+          <span class="text-xs">size-16</span>
+        </div>
+      </div>
+    `,
+  }),
+}
