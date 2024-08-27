@@ -13,30 +13,40 @@ export default {
   tags: ['autodocs'],
 }
 
+const defaultTemplate = `
+  <Placeholder class="h-8" />
+`
+
 export const Default = {
   parameters: {
     docs: {
       source: {
-        code: '<Placeholder />',
+        code: defaultTemplate,
       },
     },
   },
+
   render: () => ({
     components: { Placeholder },
-    template: '<Placeholder />',
+    template: defaultTemplate,
   }),
 }
+
+const withContentTemplate = `
+  <Placeholder class="h-8">Using default slot</Placeholder>
+`
 
 export const WithContent = {
   parameters: {
     docs: {
       source: {
-        code: '<Placeholder>Using default slot</Placeholder>',
+        code: withContentTemplate,
       },
     },
   },
+
   render: () => ({
     components: { Placeholder },
-    template: '<Placeholder>Using default slot</Placeholder>',
+    template: withContentTemplate,
   }),
 }
