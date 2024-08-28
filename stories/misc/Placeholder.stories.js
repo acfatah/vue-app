@@ -127,31 +127,31 @@ export const Rounded = {
       <div class="flex gap-2">
         <div class="flex flex-col items-center justify-between">
           <Placeholder class="size-8 rounded-full" :class="[args.textSize, args.fontWeight]">
-            <span v-html="args.label" class="leading-relaxed"></span>
+            <span class="leading-relaxed" v-html="args.label" />
           </Placeholder>
           <div class="text-xs">size-8</div>
         </div>
         <div class="flex flex-col items-center justify-between">
           <Placeholder class="size-10 rounded-full" :class="[args.textSize, args.fontWeight]">
-            <span v-html="args.label" class="leading-relaxed"></span>
+            <span class="leading-relaxed" v-html="args.label" />
           </Placeholder>
           <span class="text-xs">size-10</span>
         </div>
         <div class="flex flex-col items-center justify-between">
           <Placeholder class="size-12 rounded-full" :class="[args.textSize, args.fontWeight]">
-            <span v-html="args.label" class="leading-relaxed"></span>
+            <span class="leading-relaxed" v-html="args.label" />
           </Placeholder>
           <span class="text-xs">size-12</span>
         </div>
         <div class="flex flex-col items-center justify-between">
           <Placeholder class="size-14 rounded-full" :class="[args.textSize, args.fontWeight]">
-            <span v-html="args.label" class="leading-relaxed"></span>
+            <span class="leading-relaxed" v-html="args.label" />
           </Placeholder>
           <span class="text-xs">size-14</span>
         </div>
         <div class="flex flex-col items-center justify-between">
           <Placeholder class="size-16 rounded-full" :class="[args.textSize, args.fontWeight]">
-            <span v-html="args.label" class="leading-relaxed"></span>
+            <span class="leading-relaxed" v-html="args.label" />
           </Placeholder>
           <span class="text-xs">size-16</span>
         </div>
