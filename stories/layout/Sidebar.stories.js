@@ -4,7 +4,7 @@ import '~/styles/app.css'
 import Placeholder from '~/components/Placeholder.vue'
 
 const basicSidebarTemplate = `
-  <nav class="flex max-h-screen min-h-screen w-64 flex-col">
+  <aside class="flex max-h-screen min-h-screen w-64 flex-col">
     <Placeholder class="sticky top-0 z-10 min-h-16 bg-white dark:bg-black">
       Brand
     </Placeholder>
@@ -14,7 +14,7 @@ const basicSidebarTemplate = `
     <Placeholder class="sticky bottom-0 z-10 min-h-8 bg-white dark:bg-black">
       Sidenav Footer
     </Placeholder>
-  </nav>
+  </aside>
 `
 const BasicSidebar = defineComponent({
   name: 'BasicSidebar',
