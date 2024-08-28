@@ -1,0 +1,21 @@
+import { Meta, Source } from "@storybook/blocks";
+
+<Meta title="layout" />
+
+# Layout
+
+Layout components handles a specific page structure like headers, toolbars, sidebars,
+and main content areas.
+
+We use vue-router to serve the main content, which corresponds to the HTML main
+element. Toolbars are represented by the HTML nav elements, Sidebars are represented
+by the HTML aside elements, while the footer is rendered using the HTML footer element.
+
+<Source code={`
+<template>
+  <slot name="header" />
+  <router-view />
+  <slot name="footer" />
+</template>
+`} />
+
