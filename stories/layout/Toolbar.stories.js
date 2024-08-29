@@ -2,6 +2,7 @@ import { defineComponent } from 'vue'
 
 import '~/styles/app.css'
 import Placeholder from '~/components/Placeholder.vue'
+import Icon from '~/components/Icon.vue'
 
 const toolbarTemplate = `
 <header class="bg-background flex h-9 items-center px-2 space-x-1 rounded-none border-b border-neutral-200 shadow-sm lg:px-4">
@@ -178,7 +179,7 @@ export const ToolbarButton = {
 
 const toolbarMenuIconButtonTemplate = `
 <button type="button" class="ring-neutral-300 focus:ring-ring rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon size-4"><circle cx="12" cy="12" r="1" /><circle cx="12" cy="5" r="1" /><circle cx="12" cy="19" r="1" /></svg><span class="sr-only">More</span>
+  <Icon width="18" height="18" name="more-vertical"><span class="sr-only">Menu</span></Icon><span class="sr-only">Menu</span>
 </button>
 `
 
@@ -192,13 +193,19 @@ export const ToolbarMenuIconButton = {
   },
 
   render: () => ({
+    components: { Icon },
+
+    setup() {
+      return { Icon }
+    },
+
     template: toolbarMenuIconButtonTemplate,
   }),
 }
 
 const toolbarCloseButtonTemplate = `
 <button type="button" class="ring-neutral-300 focus:ring-ring rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-xicon size-4"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg><span class="sr-only">Close</span>
+  <Icon width="18" height="18" name="x" /><span class="sr-only">Close</span>
 </button>
 `
 /**
@@ -214,6 +221,16 @@ export const ToolbarCloseButton = {
   },
 
   render: () => ({
-    template: toolbarCloseButtonTemplate,
+    components: { Icon },
+
+    setup() {
+      return { Icon }
+    },
+
+    template: `
+<button type="button" class="ring-neutral-300 focus:ring-ring rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none">
+  <Icon width="18" height="18" name="x" /><span class="sr-only">Close</span>
+</button>
+`,
   }),
 }
