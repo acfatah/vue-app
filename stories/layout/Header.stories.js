@@ -2,39 +2,38 @@ import { defineComponent } from 'vue'
 
 import '~/styles/app.css'
 import Placeholder from '~/components/Placeholder.vue'
+import Icon from '~/components/Icon.vue'
 
 const basicHeaderTemplate = `
-  <header class="flex min-h-16 items-center justify-between border-b border-gray-200 px-4 dark:border-gray-800 dark:text-neutral-50">
+  <header class="flex min-h-16 items-center justify-between border-b border-neutral-200 px-4 sm:flex-row sm:items-center sm:space-y-0 md:h-16">
     <div class="flex items-center gap-2">
-      <Placeholder class="cursor-pointer p-1">
-        Vue Application
-      </Placeholder>
+      <h2 class="text-lg font-semibold">Vue App</h2>
     </div>
     <div>
       <!-- desktop display -->
-      <div class="hidden gap-2 lg:flex">
-        <Placeholder class="size-8 cursor-pointer items-center" @click="toggleSidebar">
-          🔔
-        </Placeholder>
+      <div class="hidden gap-2 md:flex">
+        <button type="button" class="flex items-center justify-center size-8 ring-neutral-300 focus:ring-ring rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none hover:bg-neutral-100">
+          <Icon name="bell"><span class="sr-only">Notification</span>
+        </button>
         <Placeholder class="size-8 cursor-pointer rounded-full">
           AA
         </Placeholder>
       </div>
       <!-- mobile display -->
-      <div class="flex lg:hidden">
-        <Placeholder class="size-8 cursor-pointer items-center" @click="toggleSidebar">
-          ☰
-        </Placeholder>
+      <div class="flex md:hidden">
+        <button type="button" class="flex items-center justify-center size-8 ring-neutral-300 focus:ring-ring rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none">
+          <Icon name="more-vertical"><span class="sr-only">Menu</span>
+        </button>
       </div>
     </div>
   </header>
 `
 const BasicHeader = defineComponent({
   name: 'BasicHeader',
-  components: { Placeholder },
+  components: { Icon, Placeholder },
 
   setup() {
-    return { Placeholder }
+    return { Icon, Placeholder }
   },
 
   template: basicHeaderTemplate,
@@ -58,9 +57,40 @@ export const Default = {
       },
       story: {
         inline: false,
-        height: '668px',
+        height: '112px',
       },
     },
   },
 }
 
+export const HeaderMenuIconButton = {
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<button type="button" class="flex items-center justify-center size-8 ring-neutral-300 focus:ring-ring rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none hover:bg-neutral-100">
+  <Icon name="more-vertical"><span class="sr-only">Menu</span>
+</button>
+`,
+      },
+    },
+  },
+
+  args: {
+    name: 'more-vertical',
+  },
+
+  render: args => ({
+    components: { Icon, Placeholder },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <button type="button" class="flex items-center justify-center size-8 ring-neutral-300 focus:ring-ring rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none hover:bg-neutral-100">
+        <Icon v-bind="args"><span class="sr-only">Menu</span>
+      </button>
+    `,
+  }),
+}
