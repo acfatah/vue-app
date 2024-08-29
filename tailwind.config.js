@@ -1,6 +1,7 @@
 import aspectRatio from '@tailwindcss/aspect-ratio'
 import forms from '@tailwindcss/forms'
 import typography from '@tailwindcss/typography'
+import animation from 'tailwindcss-animate'
 import { fontFamily } from 'tailwindcss/defaultTheme'
 
 /** @type {import('tailwindcss').Config} */
@@ -73,6 +74,7 @@ export default {
     },
   },
   plugins: [
+    animation,
     aspectRatio,
     forms,
     typography,
