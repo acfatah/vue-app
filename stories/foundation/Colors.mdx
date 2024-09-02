@@ -1,0 +1,189 @@
+import { Meta } from "@storybook/blocks";
+import { ColorPalette, ColorItem } from "@storybook/addon-docs";
+
+<Meta title="Foundation/Colors" />
+
+# Colors
+
+The color tokens are defined in `src/app.css`.
+By default, [Tailwindcss Colors](https://tailwindcss.com/docs/customizing-colors)
+are available.
+
+## Color Tokens
+
+### Primary
+
+Define the brand and are used to highlight key actions or elements.
+
+- Primary: The main brand color used for primary actions (e.g., buttons, links).
+- Primary Variant: A lighter or darker version of the primary color, used for hover states or other interactive elements.    
+
+<ColorPalette>
+  <ColorItem
+    title="primary"
+    colors={{
+      '--primary': 'hsl(24 9.8% 10%)',
+      '--primary-foreground': 'hsl(60 9.1% 97.8%)',
+    }}
+  />
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem
+    title="dark primary"
+    colors={{
+      '--primary': 'hsl(245 93% 67%)',
+      '--primary-foreground': 'hsl(0 0% 98%)',
+    }}
+  />
+</ColorPalette>
+
+
+### Secondary
+
+Used for secondary actions or to add contrast to your design.
+
+- Secondary: A secondary color used for less prominent actions.
+- Secondary Variant: A lighter or darker version of the secondary color.
+
+<ColorPalette>
+  <ColorItem
+    title="secondary"
+    colors={{
+      '--secondary': 'hsl(60 4.8% 95.9%)',
+      '--secondary-foreground': 'hsl(24 9.8% 10%)',
+    }}
+  />
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem
+    title="dark secondary"
+    colors={{
+      '--secondary': 'hsl(215 14% 34%)',
+      '--secondary-foreground': 'hsl(220 14% 96%)',
+    }}
+  />
+</ColorPalette>
+
+
+### Accent
+
+Used sparingly to draw attention to specific UI elements or to indicate state.
+
+- Accent: A color used to highlight certain elements like links, notifications, or special offers.
+- Accent Variant: A variant for hover states or more subtle accents.
+
+<ColorPalette>
+  <ColorItem
+    title="accent"
+    colors={{
+      '--accent': 'hsl(60 4.8% 95.9%)',
+      '--accent-foreground': 'hsl(24 9.8% 10%)',
+    }}
+  />
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem
+    title="dark accent"
+    colors={{
+      '--accent': 'hsl(245 28% 15%)',
+      '--accent-foreground': 'hsl(0 0% 98%)',
+    }}
+  />
+</ColorPalette>
+
+
+### Muted / Gray
+
+Used for text, backgrounds, and subtle UI elements.
+
+<ColorPalette>
+  <ColorItem
+    title="muted"
+    colors={{
+      '--muted': 'hsl(60 4.8% 95.9%)',
+      '--muted-foreground': 'hsl(25 5.3% 44.7%)',
+    }}
+  />
+</ColorPalette>
+
+
+### Status
+
+Colors that communicate the status of an element, like success, warning, or error states.
+
+- Success: A color used to indicate success (e.g., green).
+- Warning: A color used to signal caution (e.g., yellow).
+- Error: A color used to indicate an error or destructive action (e.g., red).
+- Info: A color used for informational messages (e.g., blue).
+
+<ColorPalette>
+  <ColorItem
+    title="Status"
+    colors={ {
+      '--destructive': 'hsl(0 84.2% 60.2%)',
+      '--destructive-foreground': 'hsl(60 9.1% 97.8%)',
+    }}
+  />
+</ColorPalette>
+
+
+### Neutral
+
+Essential for creating a balanced UI, focusing on backgrounds, text, and borders.
+
+- Background: The main background color, often a light or dark neutral.
+- Surface: A color for cards, modals, and other UI surfaces that need to stand out against the background.
+- Border: A neutral color used for borders, dividers, or outlines.
+
+<ColorPalette>
+  <ColorItem
+    title="background / foreground"
+    colors={{
+      '--background': 'hsl(0 0% 100%)',
+      '--foreground': 'hsl(20 14.3% 4.1%)',
+      '--border': 'hsl(20 5.9% 90%)',
+      '--input': 'hsl(20 5.9% 90%)',
+      '--ring': 'hsl(20 14.3% 4.1%)',
+    }}
+  />
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem
+    title="card / popover"
+    colors={{
+      '--card': 'hsl(0 0% 100%)',
+      '--card-foreground': 'hsl(20 14.3% 4.1%)',
+      '--popover': 'hsl(0 0% 100%)',
+      '--popover-foreground': 'hsl(20 14.3% 4.1%)',
+    }}
+  />
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem
+    title="dark background / foreground"
+    colors={{
+      '--background': 'hsl(218 17% 9%)',
+      '--foreground': 'hsl(0 0% 98%)',
+      '--border': 'hsl(214 16% 28%)',
+      '--input': 'hsl(214 16% 28%)',
+      '--ring': 'hsl(24 5.7% 25.9%)',
+    }}
+  />
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem
+    title="dark card / popover"
+    colors={{
+      '--card': 'hsl(218 15% 14%)',
+      '--card-foreground': 'hsl(0 0% 98%)',
+      '--popover': 'hsl(218 17% 9%)',
+      '--popover-foreground': 'hsl(0 0% 98%)',
+    }}
+  />
+</ColorPalette>

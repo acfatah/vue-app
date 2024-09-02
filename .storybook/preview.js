@@ -14,6 +14,7 @@ const preview = {
       storySort: {
         order: [
           'Readme',
+          'Foundation',
           'Graphic Elements',
           'Misc',
           'Layout',
