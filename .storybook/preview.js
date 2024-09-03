@@ -26,7 +26,16 @@ const preview = {
     themes: {
       target: 'html',
     },
-    backgrounds: { disable: true },
+    backgrounds: {
+      disable: true,
+      grid: {
+        cellSize: 4,
+        opacity: 0.1,
+        cellAmount: 4,
+        offsetX: 0, // Default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
+        offsetY: 0, // Default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
+      },
+    },
   },
 
   decorators: [
