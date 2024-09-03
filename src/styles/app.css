@@ -4,6 +4,8 @@
 
 @layer base {
   :root {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
     --primary: 24 9.8% 10%;
     --primary-foreground: 60 9.1% 97.8%;
 
