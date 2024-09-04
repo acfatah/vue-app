@@ -16,6 +16,7 @@ const preview = {
           'Readme',
           'Foundation',
           'Graphic Elements',
+          'Form',
           'Misc',
           'Layout',
           'Example',
