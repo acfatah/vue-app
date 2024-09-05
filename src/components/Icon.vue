@@ -13,5 +13,5 @@ const SvgIcon = defineAsyncComponent(async () =>
 </script>
 
 <template>
-  <SvgIcon :width="props.width" :height="props.height" />
+  <SvgIcon v-if="props.name" :width="props.width" :height="props.height" />
 </template>
