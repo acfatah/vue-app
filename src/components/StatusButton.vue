@@ -3,7 +3,6 @@ import { computed } from 'vue'
 
 const props = defineProps({
   loading: { type: Boolean, default: false },
-  label: { type: String, default: 'Button' },
   icon: { type: String, default: '' },
   status: { type: String, default: '' },
 })
@@ -32,6 +31,6 @@ const statusClass = computed(() => {
   >
     <Icon v-if="props.icon && !props.loading" :name="props.icon" class="mr-2" />
     <Icon v-if="props.loading" name="loader-circle" class="mr-2 animate-spin" />
-    {{ props.label }}
+    <slot />
   </button>
 </template>

@@ -21,13 +21,16 @@ export default {
 }
 
 export const PrimaryButton = {
-  title: 'Primary Button',
   parameters: {
     docs: {
       source: {
         code: PrimaryButtonSource,
       },
     },
+  },
+
+  args: {
+    slotContent: 'Button',
   },
 
   render: args => ({
@@ -43,7 +46,9 @@ export const PrimaryButton = {
       <div class="flex flex-col items-start">
         <template v-for="height in heights">
           <div class="flex flex-col min-h-20 items-center">
-            <PrimaryButtonComponent v-bind="args" :class="height" />
+            <PrimaryButtonComponent v-bind="args" :class="height">
+              {{ args.slotContent }}
+            </PrimaryButtonComponent>
 
             <span class="text-xs">{{ height }}</span>
           </div>
@@ -62,6 +67,10 @@ export const SecondaryButton = {
     },
   },
 
+  args: {
+    slotContent: 'Button',
+  },
+
   render: args => ({
     components: { SecondaryButtonComponent },
 
@@ -75,7 +84,9 @@ export const SecondaryButton = {
       <div class="flex flex-col items-start">
         <template v-for="height in heights">
           <div class="flex flex-col min-h-20 items-center">
-            <SecondaryButtonComponent v-bind="args" :class="height" />
+            <SecondaryButtonComponent v-bind="args" :class="height">
+              {{ args.slotContent }}
+            </SecondaryButtonComponent>
 
             <span class="text-xs">{{ height }}</span>
           </div>
@@ -94,6 +105,10 @@ export const AccentButton = {
     },
   },
 
+  args: {
+    slotContent: 'Button',
+  },
+
   render: args => ({
     components: { AccentButtonComponent },
 
@@ -107,7 +122,9 @@ export const AccentButton = {
       <div class="flex flex-col items-start">
         <template v-for="height in heights">
           <div class="flex flex-col min-h-20 items-center">
-            <AccentButtonComponent v-bind="args" :class="height" />
+            <AccentButtonComponent v-bind="args" :class="height">
+              {{ args.slotContent }}
+            </AccentButtonComponent>
 
             <span class="text-xs">{{ height }}</span>
           </div>
@@ -119,6 +136,7 @@ export const AccentButton = {
 
 export const StatusButton = {
   args: {
+    slotContent: 'Button',
     disabled: false,
   },
 
@@ -150,7 +168,9 @@ export const StatusButton = {
       <div class="flex flex-col items-start">
         <template v-for="height in heights">
           <div class="flex flex-col min-h-20 items-center">
-            <StatusButtonComponent v-bind="args" :class="height" />
+            <StatusButtonComponent v-bind="args" :class="height">
+              {{ args.slotContent }}
+            </StatusButtonComponent>
 
             <span class="text-xs">{{ height }}</span>
           </div>
@@ -162,6 +182,7 @@ export const StatusButton = {
 
 export const Outline = {
   args: {
+    slotContent: 'Button',
     disabled: false,
   },
 
@@ -186,7 +207,9 @@ export const Outline = {
       <div class="flex flex-col items-start">
         <template v-for="height in heights">
           <div class="flex flex-col min-h-20 items-center">
-            <OutlineButtonComponent v-bind="args" :class="height" />
+            <OutlineButtonComponent v-bind="args" :class="height">
+              {{ args.slotContent }}
+            </OutlineButtonComponent>
 
             <span class="text-xs">{{ height }}</span>
           </div>
@@ -198,6 +221,7 @@ export const Outline = {
 
 export const Ghost = {
   args: {
+    slotContent: 'Button',
     disabled: false,
   },
 
@@ -222,7 +246,9 @@ export const Ghost = {
       <div class="flex flex-col items-start">
         <template v-for="height in heights">
           <div class="flex flex-col min-h-20 items-center">
-            <GhostButtonComponent v-bind="args" :class="height" />
+            <GhostButtonComponent v-bind="args" :class="height">
+              {{ args.slotContent }}
+            </GhostButtonComponent>
 
             <span class="text-xs">{{ height }}</span>
           </div>
@@ -234,6 +260,7 @@ export const Ghost = {
 
 export const Link = {
   args: {
+    slotContent: 'Button',
     disabled: false,
   },
 
@@ -253,7 +280,9 @@ export const Link = {
     },
 
     template: `
-      <LinkButtonComponent v-bind="args" />
+      <LinkButtonComponent v-bind="args">
+        {{ args.slotContent }}
+      </LinkButtonComponent>
     `,
   }),
 }
