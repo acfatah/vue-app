@@ -22,7 +22,7 @@ const basicHeaderTemplate = `
       <!-- mobile display -->
       <div class="flex md:hidden">
         <button type="button" class="flex items-center justify-center size-8 ring-neutral-300 focus:ring-ring rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none">
-          <Icon name="more-vertical"><span class="sr-only">Menu</span>
+          <Icon name="ellipsis-vertical"><span class="sr-only">Menu</span>
         </button>
       </div>
     </div>
@@ -69,7 +69,7 @@ export const HeaderMenuIconButton = {
       source: {
         code: `
 <button type="button" class="flex items-center justify-center size-8 ring-neutral-300 focus:ring-ring rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none hover:bg-neutral-100">
-  <Icon name="more-vertical"><span class="sr-only">Menu</span>
+  <Icon name="ellipsis-vertical"><span class="sr-only">Menu</span>
 </button>
 `,
       },
@@ -77,7 +77,7 @@ export const HeaderMenuIconButton = {
   },
 
   args: {
-    name: 'more-vertical',
+    name: 'ellipsis-vertical',
   },
 
   render: args => ({
