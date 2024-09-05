@@ -5,6 +5,8 @@ import SecondaryButtonComponent from '~/components/SecondaryButton.vue'
 import SecondaryButtonSource from '~/components/SecondaryButton.vue?raw'
 import AccentButtonComponent from '~/components/AccentButton.vue'
 import AccentButtonSource from '~/components/AccentButton.vue?raw'
+import StatusButtonComponent from '~/components/StatusButton.vue'
+import StatusButtonSource from '~/components/StatusButton.vue?raw'
 import OutlineButtonComponent from '~/components/OutlineButton.vue'
 import OutlineButtonSource from '~/components/OutlineButton.vue?raw'
 import GhostButtonComponent from '~/components/GhostButton.vue'
@@ -106,6 +108,49 @@ export const AccentButton = {
         <template v-for="height in heights">
           <div class="flex flex-col min-h-20 items-center">
             <AccentButtonComponent v-bind="args" :class="height" />
+
+            <span class="text-xs">{{ height }}</span>
+          </div>
+        </template>
+      </div>
+    `,
+  }),
+}
+
+export const StatusButton = {
+  args: {
+    disabled: false,
+  },
+
+  argTypes: {
+    status: {
+      options: ['success', 'info', 'warning', 'error', 'default'],
+      control: { type: 'select' },
+    },
+  },
+
+  parameters: {
+    docs: {
+      source: {
+        code: StatusButtonSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { StatusButtonComponent },
+
+    setup() {
+      const heights = ['h-6', 'h-8', 'h-10', 'h-12', 'h-14', 'h-16']
+
+      return { StatusButtonComponent, args, heights }
+    },
+
+    template: `
+      <div class="flex flex-col items-start">
+        <template v-for="height in heights">
+          <div class="flex flex-col min-h-20 items-center">
+            <StatusButtonComponent v-bind="args" :class="height" />
 
             <span class="text-xs">{{ height }}</span>
           </div>

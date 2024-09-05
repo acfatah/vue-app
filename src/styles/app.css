@@ -18,8 +18,17 @@
     --muted: 60 4.8% 95.9%;
     --muted-foreground: 25 5.3% 44.7%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 9.1% 97.8%;
+    --success: 152.95 100% 37.84%;
+    --success-foreground: 120 9.1% 97.8%;
+
+    --info: 210 84.2% 60.2%;
+    --info-foreground: 210 9.1% 97.8%;
+
+    --warning: 45.4 93.39% 47.45%;
+    --warning-foreground: 50 9.1% 97.8%;
+
+    --error: 0 84.2% 60.2%;
+    --error-foreground: 0 9.1% 97.8%;
 
     --background: 0 0% 100%;
     --foreground: 20 14.3% 4.1%;
@@ -54,9 +63,21 @@
     --muted: 218 17% 19%; /* Source: from neutral-100 | rgb(40, 46, 56) | #282E38 */
     --muted-foreground: 217 15% 79%; /* Source: neutral-700 | rgb(193, 199, 209) | #C1C7D1 */
 
-    /* Colors for <Button variant="destructive" /> */
-    --destructive: 0 66% 47%; /* Source: Figma | rgb(106, 93, 249) | #6A5DF9 */
-    --destructive-foreground: 220 14% 96%; /* Source: neutral 800 | #F3F4F6 */
+    /* Colors for <Button variant="success" /> */
+    --success: 152.95 100% 37.84%;
+    --success-foreground: 220 14% 96%;
+
+    /* Colors for <Button variant="info" /> */
+    --info: 210 84.2% 60.2%;
+    --info-foreground: 220 14% 96%;
+
+    /* Colors for <Button variant="warning" /> */
+    --warning: 45.4 93.39% 47.45%;
+    --warning-foreground: 220 14% 96%;
+
+    /* Colors for <Button variant="error" /> */
+    --error: 0 66% 47%; /* Source: Figma | rgb(106, 93, 249) | #6A5DF9 */
+    --error-foreground: 220 14% 96%; /* Source: neutral 800 | #F3F4F6 */
 
     /* Default colors for <body /> */
     --background: 218 17% 9%; /* Source: neutral-50 | rgb(20, 23, 28) | #14171C */
