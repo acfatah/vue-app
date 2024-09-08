@@ -1,0 +1,68 @@
+import { useState, useEffect } from "react";
+import { Meta } from "@storybook/blocks"
+import { ColorPalette, ColorItem } from "@storybook/addon-docs"
+
+import { parseCss } from './design-system-tokens.js'
+
+<Meta title="Foundation/Design Tokens" />
+
+export function TokenItems() {
+  const [tokens, setTokens] = useState({})
+  const [themes, setThemes] = useState([])
+
+  useEffect(() => {
+    const run = async () => {
+      const tokens = await parseCss()
+      const themes = Object.keys(tokens)
+
+      setTokens(tokens) 
+      setThemes(themes)
+    }
+
+    run()
+  })
+
+  const hslPattern = /^\d+(\.\d+)?\s\d+(\.\d+)?%\s\d+(\.\d+)?%$/
+
+  const keys = tokens && tokens['default']
+    ? Object.keys(tokens['default'])
+    : []
+
+  const getHslColorsAsObject = key => {
+    return themes.reduce(
+      (acc, curr) => {
+        acc[curr] = `hsl(${tokens[curr][key]})`
+
+        return acc
+      }, {}
+    )
+  }
+
+  return <div>
+    {themes.map((theme) => (
+      <div key={theme}>
+        <h2>{theme}</h2>
+        {keys.map((name) => (
+           <div key={name}>
+            {hslPattern.test(tokens[theme][name]) ? (
+              <ColorItem
+                key={name}
+                title={name}
+                colors={getHslColorsAsObject(name)}
+              />
+            ) : (
+              <div key={name} class="flex flex-row py-4">
+                <div class="basis-1/3 max-w-[300px] font-bold">{name}</div>
+                <div class="basis-2/3">{tokens[theme][name]}</div>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    ))}
+  </div>
+}
+
+# Design Tokens
+
+<TokenItems />

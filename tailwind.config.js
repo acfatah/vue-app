@@ -92,6 +92,9 @@ export default {
     typography,
   ],
   safelist: [
+    'basis-1/3',
+    'basis-2/3',
+
     'bg-foreground',
     'bg-background',
     'bg-primary',
@@ -117,6 +120,7 @@ export default {
     'bg-ring',
     'bg-border',
     'bg-input',
+
     'font-thin',
     'font-extralight',
     'font-light',
@@ -125,6 +129,8 @@ export default {
     'font-semibold',
     'font-bold',
     'font-extrabold',
+
+    'flex-row',
 
     'gap-2',
     'gap-4',
@@ -135,8 +141,16 @@ export default {
     'leading-normal',
     'leading-relaxed',
 
+    'my-4',
+
+    'max-w-[300px]',
+
     'min-h-16',
     'min-h-8',
+    'min-w-42',
+
+    'p-1',
+    'py-4',
 
     'rounded-full',
 

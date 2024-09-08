@@ -15,7 +15,7 @@ const preview = {
         order: [
           'Readme',
           'Foundation',
-          ['DesignTokens', 'Colors'],
+          ['Design Tokens', 'Colors'],
           'Graphic Elements',
           'Form',
           'Misc',

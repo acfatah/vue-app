@@ -6,62 +6,11 @@ import { parseCss } from './design-system-tokens.js'
 
 <Meta title="Foundation/Colors" />
 
-export function DynamicColorPalette() {
-  const [tokens, setTokens] = useState({})
-  const [themes, setThemes] = useState([])
-
-  useEffect(() => {
-    const run = async () => {
-      const tokens = await parseCss()
-      const themes = Object.keys(tokens)
-
-      setTokens(tokens) 
-      setThemes(themes)
-    }
-
-    run()
-  })
-
-  const hslPattern = /^\d+(\.\d+)?\s\d+(\.\d+)?%\s\d+(\.\d+)?%$/
-
-  const keys = tokens && tokens['default']
-    ? Object.keys(tokens['default']).filter(
-      item => hslPattern.test(tokens['default'][item])
-    )
-    : []
-
-  const getThemeColorsAsObject = key => {
-    return themes.reduce(
-      (acc, curr) => {
-        acc[curr] = `hsl(${tokens[curr][key]})`
-
-        return acc
-      }, {}
-    )
-  }
-
-  return <div>
-    {keys.map((key) => (
-      <ColorItem
-        key={ key }
-        title={ key }
-        subtitle={ key }
-        colors={ getThemeColorsAsObject(key) }
-      />
-    ))}
-  </div>
-}
-
 # Colors
 
 The color tokens are defined in `src/app.css`.
 By default, [Tailwindcss Colors](https://tailwindcss.com/docs/customizing-colors)
 are available.
-
-<details class="mb-4 hidden">
-  <summary>Click to show all color tokens.</summary>
-  <DynamicColorPalette />
-</details>
 
 ## Primary
 
@@ -282,7 +231,6 @@ export function StatusColorPallete() {
 }
 
 <StatusColorPallete />
-
 
 ### Neutral
 
