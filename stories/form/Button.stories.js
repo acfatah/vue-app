@@ -1,22 +1,22 @@
 import '~/styles/app.css'
-import PrimaryButtonComponent from '~/components/PrimaryButton.vue'
-import PrimaryButtonSource from '~/components/PrimaryButton.vue?raw'
-import SecondaryButtonComponent from '~/components/SecondaryButton.vue'
-import SecondaryButtonSource from '~/components/SecondaryButton.vue?raw'
-import AccentButtonComponent from '~/components/AccentButton.vue'
-import AccentButtonSource from '~/components/AccentButton.vue?raw'
-import StatusButtonComponent from '~/components/StatusButton.vue'
-import StatusButtonSource from '~/components/StatusButton.vue?raw'
-import OutlineButtonComponent from '~/components/OutlineButton.vue'
-import OutlineButtonSource from '~/components/OutlineButton.vue?raw'
-import GhostButtonComponent from '~/components/GhostButton.vue'
-import GhostButtonSource from '~/components/GhostButton.vue?raw'
-import LinkButtonComponent from '~/components/LinkButton.vue'
-import LinkButtonSource from '~/components/LinkButton.vue?raw'
+import ButtonPrimaryComponent from '~/components/ButtonPrimary.vue'
+import ButtonPrimarySource from '~/components/ButtonPrimary.vue?raw'
+import ButtonSecondaryComponent from '~/components/ButtonSecondary.vue'
+import ButtonSecondarySource from '~/components/ButtonSecondary.vue?raw'
+import ButtonAccentComponent from '~/components/ButtonAccent.vue'
+import ButtonAccentSource from '~/components/ButtonAccent.vue?raw'
+import ButtonStatusComponent from '~/components/ButtonStatus.vue'
+import ButtonStatusSource from '~/components/ButtonStatus.vue?raw'
+import ButtonOutlineComponent from '~/components/ButtonOutline.vue'
+import ButtonOutlineSource from '~/components/ButtonOutline.vue?raw'
+import ButtonGhostComponent from '~/components/ButtonGhost.vue'
+import ButtonGhostSource from '~/components/ButtonGhost.vue?raw'
+import ButtonLinkComponent from '~/components/ButtonLink.vue'
+import ButtonLinkSource from '~/components/ButtonLink.vue?raw'
 
 export default {
   title: 'Form/Button',
-  component: PrimaryButtonComponent,
+  component: ButtonPrimaryComponent,
   tags: ['autodocs'],
 }
 
@@ -24,7 +24,7 @@ export const PrimaryButton = {
   parameters: {
     docs: {
       source: {
-        code: PrimaryButtonSource,
+        code: ButtonPrimarySource,
       },
     },
   },
@@ -34,21 +34,21 @@ export const PrimaryButton = {
   },
 
   render: args => ({
-    components: { PrimaryButtonComponent },
+    components: { ButtonPrimaryComponent },
 
     setup() {
       const heights = ['h-6', 'h-8', 'h-10', 'h-12', 'h-14', 'h-16']
 
-      return { PrimaryButtonComponent, args, heights }
+      return { ButtonPrimaryComponent, args, heights }
     },
 
     template: `
       <div class="flex flex-col items-start">
         <template v-for="height in heights">
           <div class="flex flex-col min-h-20 items-center">
-            <PrimaryButtonComponent v-bind="args" :class="height">
+            <ButtonPrimaryComponent v-bind="args" :class="height">
               {{ args.slotContent }}
-            </PrimaryButtonComponent>
+            </ButtonPrimaryComponent>
 
             <span class="text-xs">{{ height }}</span>
           </div>
@@ -62,7 +62,7 @@ export const SecondaryButton = {
   parameters: {
     docs: {
       source: {
-        code: SecondaryButtonSource,
+        code: ButtonSecondarySource,
       },
     },
   },
@@ -72,21 +72,21 @@ export const SecondaryButton = {
   },
 
   render: args => ({
-    components: { SecondaryButtonComponent },
+    components: { ButtonSecondaryComponent },
 
     setup() {
       const heights = ['h-6', 'h-8', 'h-10', 'h-12', 'h-14', 'h-16']
 
-      return { SecondaryButtonComponent, args, heights }
+      return { ButtonSecondaryComponent, args, heights }
     },
 
     template: `
       <div class="flex flex-col items-start">
         <template v-for="height in heights">
           <div class="flex flex-col min-h-20 items-center">
-            <SecondaryButtonComponent v-bind="args" :class="height">
+            <ButtonSecondaryComponent v-bind="args" :class="height">
               {{ args.slotContent }}
-            </SecondaryButtonComponent>
+            </ButtonSecondaryComponent>
 
             <span class="text-xs">{{ height }}</span>
           </div>
@@ -100,7 +100,7 @@ export const AccentButton = {
   parameters: {
     docs: {
       source: {
-        code: AccentButtonSource,
+        code: ButtonAccentSource,
       },
     },
   },
@@ -110,21 +110,21 @@ export const AccentButton = {
   },
 
   render: args => ({
-    components: { AccentButtonComponent },
+    components: { ButtonAccentComponent },
 
     setup() {
       const heights = ['h-6', 'h-8', 'h-10', 'h-12', 'h-14', 'h-16']
 
-      return { AccentButtonComponent, args, heights }
+      return { ButtonAccentComponent, args, heights }
     },
 
     template: `
       <div class="flex flex-col items-start">
         <template v-for="height in heights">
           <div class="flex flex-col min-h-20 items-center">
-            <AccentButtonComponent v-bind="args" :class="height">
+            <ButtonAccentComponent v-bind="args" :class="height">
               {{ args.slotContent }}
-            </AccentButtonComponent>
+            </ButtonAccentComponent>
 
             <span class="text-xs">{{ height }}</span>
           </div>
@@ -150,27 +150,27 @@ export const StatusButton = {
   parameters: {
     docs: {
       source: {
-        code: StatusButtonSource,
+        code: ButtonStatusSource,
       },
     },
   },
 
   render: args => ({
-    components: { StatusButtonComponent },
+    components: { ButtonStatusComponent },
 
     setup() {
       const heights = ['h-6', 'h-8', 'h-10', 'h-12', 'h-14', 'h-16']
 
-      return { StatusButtonComponent, args, heights }
+      return { ButtonStatusComponent, args, heights }
     },
 
     template: `
       <div class="flex flex-col items-start">
         <template v-for="height in heights">
           <div class="flex flex-col min-h-20 items-center">
-            <StatusButtonComponent v-bind="args" :class="height">
+            <ButtonStatusComponent v-bind="args" :class="height">
               {{ args.slotContent }}
-            </StatusButtonComponent>
+            </ButtonStatusComponent>
 
             <span class="text-xs">{{ height }}</span>
           </div>
@@ -189,27 +189,27 @@ export const Outline = {
   parameters: {
     docs: {
       source: {
-        code: OutlineButtonSource,
+        code: ButtonOutlineSource,
       },
     },
   },
 
   render: args => ({
-    components: { OutlineButtonComponent },
+    components: { ButtonOutlineComponent },
 
     setup() {
       const heights = ['h-6', 'h-8', 'h-10', 'h-12', 'h-14', 'h-16']
 
-      return { OutlineButtonComponent, args, heights }
+      return { ButtonOutlineComponent, args, heights }
     },
 
     template: `
       <div class="flex flex-col items-start">
         <template v-for="height in heights">
           <div class="flex flex-col min-h-20 items-center">
-            <OutlineButtonComponent v-bind="args" :class="height">
+            <ButtonOutlineComponent v-bind="args" :class="height">
               {{ args.slotContent }}
-            </OutlineButtonComponent>
+            </ButtonOutlineComponent>
 
             <span class="text-xs">{{ height }}</span>
           </div>
@@ -228,27 +228,27 @@ export const Ghost = {
   parameters: {
     docs: {
       source: {
-        code: GhostButtonSource,
+        code: ButtonGhostSource,
       },
     },
   },
 
   render: args => ({
-    components: { GhostButtonComponent },
+    components: { ButtonGhostComponent },
 
     setup() {
       const heights = ['h-6', 'h-8', 'h-10', 'h-12', 'h-14', 'h-16']
 
-      return { GhostButtonComponent, args, heights }
+      return { ButtonGhostComponent, args, heights }
     },
 
     template: `
       <div class="flex flex-col items-start">
         <template v-for="height in heights">
           <div class="flex flex-col min-h-20 items-center">
-            <GhostButtonComponent v-bind="args" :class="height">
+            <ButtonGhostComponent v-bind="args" :class="height">
               {{ args.slotContent }}
-            </GhostButtonComponent>
+            </ButtonGhostComponent>
 
             <span class="text-xs">{{ height }}</span>
           </div>
@@ -267,22 +267,22 @@ export const Link = {
   parameters: {
     docs: {
       source: {
-        code: LinkButtonSource,
+        code: ButtonLinkSource,
       },
     },
   },
 
   render: args => ({
-    components: { LinkButtonComponent },
+    components: { ButtonLinkComponent },
 
     setup() {
-      return { LinkButtonComponent, args }
+      return { ButtonLinkComponent, args }
     },
 
     template: `
-      <LinkButtonComponent v-bind="args">
+      <ButtonLinkComponent v-bind="args">
         {{ args.slotContent }}
-      </LinkButtonComponent>
+      </ButtonLinkComponent>
     `,
   }),
 }
