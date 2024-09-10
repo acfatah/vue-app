@@ -38,6 +38,7 @@ export function PrimaryColorPallete() {
   return (
     themes.map(theme => 
       <ColorItem
+        key={theme}
         title={theme}
         colors={{
           '--primary': `hsl(${tokens[theme]['--primary']})`,
@@ -76,6 +77,7 @@ export function SecondaryColorPallete() {
   return (
     themes.map(theme => 
       <ColorItem
+        key={theme}
         title={theme}
         colors={{
           '--secondary': `hsl(${tokens[theme]['--secondary']})`,
@@ -114,6 +116,7 @@ export function AccentColorPallete() {
   return (
     themes.map(theme => 
       <ColorItem
+        key={theme}
         title={theme}
         colors={{
           '--accent': `hsl(${tokens[theme]['--accent']})`,
@@ -149,6 +152,7 @@ export function MutedColorPallete() {
   return (
     themes.map(theme => 
       <ColorItem
+        key={theme}
         title={theme}
         colors={{
           '--muted': `hsl(${tokens[theme]['--muted']})`,
@@ -188,8 +192,8 @@ export function StatusColorPallete() {
   }) 
 
   return (
-    themes.map(theme => <div> 
-      <hr class="my-4" />
+    themes.map(theme => <div key={theme}> 
+      <hr className="my-4" />
 
       <ColorItem
         title="success"
@@ -257,8 +261,8 @@ export function NeutralColorPallete() {
   }) 
 
   return (
-    themes.map(theme => <div> 
-      <hr class="my-4" />
+    themes.map(theme => <div key={theme}> 
+      <hr className="my-4" />
 
       <ColorItem
         title="background / foreground"
