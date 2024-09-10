@@ -18,6 +18,8 @@ const preview = {
           ['Design Tokens', 'Colors'],
           'Graphic Elements',
           'Form',
+          'Data Grid',
+          ['Table', 'Data Table'],
           'Misc',
           'Layout',
           'Example',
