@@ -31,6 +31,7 @@ export const PrimaryButton = {
 
   args: {
     slotContent: 'Button',
+    disabled: false,
   },
 
   render: args => ({
@@ -69,6 +70,7 @@ export const SecondaryButton = {
 
   args: {
     slotContent: 'Button',
+    disabled: false,
   },
 
   render: args => ({
@@ -107,6 +109,7 @@ export const AccentButton = {
 
   args: {
     slotContent: 'Button',
+    disabled: false,
   },
 
   render: args => ({
