@@ -51,15 +51,15 @@ const preview = {
       defaultTheme: 'light',
     }),
 
-    // Decorator to apply bg-color to stories in dark mode
+    // Decorator to apply bg-background to stories
     (_) => {
       const body = document.querySelector('body')
       const stories = document.querySelectorAll('.docs-story')
-      const DARK_MODE_CLASS = 'dark:bg-neutral-950'
+      const THEME_CLASS = 'bg-background'
 
-      body?.classList.add(DARK_MODE_CLASS)
+      body?.classList.add(THEME_CLASS)
       stories.forEach((element) => {
-        element.classList.add(DARK_MODE_CLASS)
+        element.classList.add(THEME_CLASS)
       })
 
       return { template: `<story/>` }

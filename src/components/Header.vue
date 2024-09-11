@@ -2,6 +2,9 @@
 import ViteSvg from '../assets/vite.svg'
 import VueSvg from '../assets/vue.svg'
 import TailwindcssSvg from '../assets/tailwindcss.svg'
+import { useTheme } from '~/composables/use-theme.js'
+
+const { colorMode, toggleTheme } = useTheme()
 </script>
 
 <template>
@@ -18,4 +21,10 @@ import TailwindcssSvg from '../assets/tailwindcss.svg'
       </a>
     </div>
   </header>
+  <!-- Dark mode switcher example -->
+  <Teleport to="body">
+    <button class="fixed right-4 top-4 rounded-full border bg-background p-2" @click="toggleTheme">
+      {{ colorMode === 'dark' ? '🌞' : '🌙' }}
+    </button>
+  </Teleport>
 </template>
